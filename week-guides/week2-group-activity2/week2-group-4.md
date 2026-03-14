@@ -1,18 +1,28 @@
-# Group 4 – Delete Student
+# Group 4 – Register Lecturer
 
 ## Feature
 
-Allow users to **delete** a student.
+Implement the **Lecturer Registration Screen**.
 
 ## Tasks
 
-- Add a delete icon/button for each student.
-- Confirm before deleting.
+- Create a form to register a new lecturer.
+- **Fields:**
+  - Lecturer Name
+  - Lecturer ID
+  - Email
+  - Department
+- Add a **Submit** button.
+
+## Requirements
+
+- Use Flutter widgets for the UI.
+- Validate that all fields are filled.
 
 ## Expected Outcome
 
-Users should be able to remove students from the system.
+Users should be able to add a new lecturer to the system.
 
 ## Branch Name
 
-`feature/delete-student`
+`feature/register-lecturer`

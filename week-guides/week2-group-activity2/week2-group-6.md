@@ -1,20 +1,22 @@
-# Group 6 – Search Students
+# Group 6 – Lecturer List
 
 ## Feature
 
-Add a **search** functionality.
+Display the list of registered lecturers.
 
 ## Tasks
 
-- Create a search bar.
-- Filter students by:
-  - Name
-  - Student ID
+- Create a screen to show all lecturers.
+- Use a **ListView** to display them.
+- Each list item should show:
+  - Lecturer Name
+  - Lecturer ID
+  - Department
 
 ## Expected Outcome
 
-Users should quickly find a student using search.
+Users should be able to see all lecturers in a scrollable list.
 
 ## Branch Name
 
-`feature/student-search`
+`feature/lecturer-list`

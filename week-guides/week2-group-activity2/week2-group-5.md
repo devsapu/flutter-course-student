@@ -1,20 +1,22 @@
-# Group 5 – Update Student
+# Group 5 – Lecturer Details
 
 ## Feature
 
-Implement **Edit / Update Student Information**.
+Create a **Lecturer Details Screen**.
 
 ## Tasks
 
-- Allow editing:
+- When a lecturer item is clicked (in the lecturer list), open a details page.
+- Display:
   - Name
+  - ID
   - Email
-  - Course
+  - Department
 
 ## Expected Outcome
 
-Users should be able to update student details.
+Users should be able to view detailed information about a lecturer.
 
 ## Branch Name
 
-`feature/update-student`
+`feature/lecturer-details`
