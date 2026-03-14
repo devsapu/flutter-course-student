@@ -12,10 +12,10 @@ Add **one line** to the main **README.md** at the root of the repository: a shor
 
 ## Steps
 
-1. Make sure you are on `week-2` and up to date:
+1. Make sure you are on `main` and up to date:
    ```bash
-   git checkout week-2
-   git pull origin week-2
+   git checkout main
+   git pull origin main
    ```
 
 2. Create and switch to your group branch:
@@ -36,7 +36,7 @@ Add **one line** to the main **README.md** at the root of the repository: a shor
    git push -u origin group-7/readme-update
    ```
 
-5. On GitHub, open a **Pull Request** from `group-7/readme-update` to `week-2`. Watch the **Actions** tab until CI finishes (the Flutter CI will still run and should pass).
+5. On GitHub, open a **Pull Request** from `group-7/readme-update` to `main`. Watch the **Actions** tab until CI finishes (the Flutter CI will still run and should pass).
 
 ---
 

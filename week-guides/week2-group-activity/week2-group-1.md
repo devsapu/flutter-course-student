@@ -12,10 +12,10 @@ Change the **welcome message** on the home screen of the Task Manager app (the t
 
 ## Steps
 
-1. Make sure you are on `week-2` and up to date:
+1. Make sure you are on `main` and up to date:
    ```bash
-   git checkout week-2
-   git pull origin week-2
+   git checkout main
+   git pull origin main
    ```
 
 2. Create and switch to your group branch:
@@ -46,7 +46,7 @@ Change the **welcome message** on the home screen of the Task Manager app (the t
    git push -u origin group-1/welcome-text
    ```
 
-7. On GitHub, open a **Pull Request** from `group-1/welcome-text` to `week-2`. Watch the **Actions** tab until CI finishes (green = passed).
+7. On GitHub, open a **Pull Request** from `group-1/welcome-text` to `main`. Watch the **Actions** tab until CI finishes (green = passed).
 
 ---
 

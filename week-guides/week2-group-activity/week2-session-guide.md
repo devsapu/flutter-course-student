@@ -13,7 +13,7 @@ Students practice the full flow: **branch → change code → commit → push �
 
 ## Before the session
 
-- [ ] Repo is on branch `week-2` and pushed (students will clone or pull).
+- [ ] Repo is on branch `main` and pushed (students will clone or pull).
 - [ ] Each group has (or will have) access to the same GitHub repo (e.g. fork, or one repo with branch-based tasks).
 - [ ] Share the repo URL and confirm everyone has Flutter installed (`flutter doctor`).
 
@@ -52,7 +52,7 @@ Students practice the full flow: **branch → change code → commit → push �
 
 1. **Branch names:** Each task suggests a branch name (e.g. `group-1/welcome-text`). This avoids clashes when all 8 groups push.
 2. **One repo vs forks:** If all use the same repo, they need push access and must use different branch names (the task files already do this).
-3. **CI:** Remind students to open a **Pull Request** (targeting `week-2` or `main`) so they can see the Actions run.
+3. **CI:** Remind students to open a **Pull Request** (targeting `main`) so they can see the Actions run.
 4. **Stuck groups:** Common issues – wrong branch, forgot `flutter pub get` or `flutter test` before pushing, or PR target branch wrong. Have them check CONTRIBUTING.md.
 5. **Time:** If short on time, reduce to 4 groups (e.g. use tasks 1, 2, 3, 4 only) or let two groups share one task file.
 

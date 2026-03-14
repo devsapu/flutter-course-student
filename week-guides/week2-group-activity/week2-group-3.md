@@ -12,10 +12,10 @@ Add **one new assertion** in the widget test: check that the **check circle icon
 
 ## Steps
 
-1. Make sure you are on `week-2` and up to date:
+1. Make sure you are on `main` and up to date:
    ```bash
-   git checkout week-2
-   git pull origin week-2
+   git checkout main
+   git pull origin main
    ```
 
 2. Create and switch to your group branch:
@@ -44,7 +44,7 @@ Add **one new assertion** in the widget test: check that the **check circle icon
    git push -u origin group-3/test-icon
    ```
 
-6. On GitHub, open a **Pull Request** from `group-3/test-icon` to `week-2`. Watch the **Actions** tab until CI finishes.
+6. On GitHub, open a **Pull Request** from `group-3/test-icon` to `main`. Watch the **Actions** tab until CI finishes.
 
 ---
 

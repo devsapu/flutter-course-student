@@ -12,10 +12,10 @@ Change the **app bar title** from “Task Manager” to “Task Manager – Grou
 
 ## Steps
 
-1. Make sure you are on `week-2` and up to date:
+1. Make sure you are on `main` and up to date:
    ```bash
-   git checkout week-2
-   git pull origin week-2
+   git checkout main
+   git pull origin main
    ```
 
 2. Create and switch to your group branch:
@@ -45,7 +45,7 @@ Change the **app bar title** from “Task Manager” to “Task Manager – Grou
    git push -u origin group-5/appbar-title
    ```
 
-7. On GitHub, open a **Pull Request** from `group-5/appbar-title` to `week-2`. Watch the **Actions** tab until CI finishes.
+7. On GitHub, open a **Pull Request** from `group-5/appbar-title` to `main`. Watch the **Actions** tab until CI finishes.
 
 ---
 
