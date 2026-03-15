@@ -16,7 +16,7 @@ void main() {
     await tester.pumpWidget(const TaskManagerApp());
 
     // AppBar title from HomePage.
-    expect(find.text('Task Manager'), findsOneWidget);
+    expect(find.text('Task Manager - Group 5'), findsOneWidget);
 
     // Body text from HomePage.
     expect(find.text('Welcome to Task Manager'), findsOneWidget);
