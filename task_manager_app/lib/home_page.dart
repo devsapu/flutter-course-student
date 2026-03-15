@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              'Welcome to Group 1',
+              'Welcome to Task Manager',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             const SizedBox(height: 8),
@@ -32,17 +32,20 @@ class HomePage extends StatelessWidget {
                     color: Theme.of(context).colorScheme.onSurfaceVariant,
                   ),
             ),
-
-             const SizedBox(height: 30),
-
-            // Student Registration Button
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/students_details');
+              },
+              child: const Text('Student Details'),
+            ),
+            const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) =>
-                        const StudentRegistrationScreen(),
+                    builder: (context) => const StudentRegistrationScreen(),
                   ),
                 );
               },

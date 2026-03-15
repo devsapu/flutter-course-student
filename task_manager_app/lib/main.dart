@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'student_registration_screen.dart';
+import 'package:task_manager_app/screens/student_details_screen.dart';
 import 'home_page.dart';
 
 void main() {
@@ -17,8 +17,11 @@ class TaskManagerApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const HomePage(),
-      // home: const StudentRegistrationScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomePage(),
+        '/students_details': (context) => const StudentDetailsScreen(),
+      },
     );
   }
 }
