@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              'Welcome to Task Manager',
+              'Welcome to Group 1',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             const SizedBox(height: 8),
