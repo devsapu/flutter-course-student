@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'student_registration_screen.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              'Welcome to Task Manager',
+              'Welcome to Group 1',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             const SizedBox(height: 8),
@@ -37,6 +38,18 @@ class HomePage extends StatelessWidget {
                 Navigator.pushNamed(context, '/students_details');
               },
               child: const Text('Student Details'),
+            ),
+            const SizedBox(height: 30),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const StudentRegistrationScreen(),
+                  ),
+                );
+              },
+              child: const Text('Student Registration form'),
             ),
           ],
         ),
