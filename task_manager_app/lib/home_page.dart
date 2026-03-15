@@ -9,7 +9,14 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Task Manager'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.add,color: Colors.black,))],
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.add,
+                color: Colors.black,
+              ))
+        ],
       ),
       body: Center(
         child: Column(
@@ -32,6 +39,12 @@ class HomePage extends StatelessWidget {
                     color: Theme.of(context).colorScheme.onSurfaceVariant,
                   ),
             ),
+            const SizedBox(height: 8),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed("/lecture-list");
+                },
+                child: const Text('View Lectures'))
           ],
         ),
       ),

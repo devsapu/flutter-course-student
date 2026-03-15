@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager_app/lecture_list_page.dart';
 import 'home_page.dart';
 
 void main() {
@@ -17,6 +18,9 @@ class TaskManagerApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const HomePage(),
+      routes: {
+        '/lecture-list': (context) => LectureListPage()
+      },
       debugShowCheckedModeBanner: false,
     );
   }
