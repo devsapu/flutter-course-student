@@ -7,20 +7,22 @@
 // 4. Optionally interact: tester.tap(), tester.enterText(), then pump()
 
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:task_manager_app/main.dart';
 
 void main() {
-  testWidgets('App shows Task Manager title and welcome message',
+  testWidgets('App shows Task Manager title, welcome, and students list',
       (WidgetTester tester) async {
     await tester.pumpWidget(const TaskManagerApp());
 
-    // AppBar title from HomePage.
     expect(find.text('Task Manager'), findsOneWidget);
-
-    // Body text from HomePage.
     expect(find.text('Welcome to Task Manager'), findsOneWidget);
 
-    // Other useful matchers: findsNothing, findsWidgets, findsNWidgets(2)
+    expect(find.text('View Students'), findsOneWidget);
+
+    await tester.tap(find.text('View Students'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Students'), findsOneWidget);
+    expect(find.text('Alice Johnson'), findsOneWidget);
   });
 }
