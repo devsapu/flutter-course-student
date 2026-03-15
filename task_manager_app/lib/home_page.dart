@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/student_list_screen.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -26,10 +27,22 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              'Week 2 – Your first Flutter app',
+              'Manage your tasks efficiently and stay organized.',
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     color: Theme.of(context).colorScheme.onSurfaceVariant,
                   ),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const StudentListScreen(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.person_search),
+              label: const Text('View Students'),
             ),
           ],
         ),
