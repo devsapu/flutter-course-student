@@ -16,10 +16,13 @@ void main() {
     await tester.pumpWidget(const TaskManagerApp());
 
     // AppBar title from HomePage.
-    expect(find.text('Task Manager'), findsOneWidget);
+    expect(find.textContaining('Week 2'), findsOneWidget); 
 
     // Body text from HomePage.
     expect(find.text('Welcome to Task Manager'), findsOneWidget);
+
+    expect(find.textContaining('Week 2'), findsOneWidget);
+
     expect(find.byIcon(Icons.check_circle_outline), findsOneWidget);
 
     // Other useful matchers: findsNothing, findsWidgets, findsNWidgets(2)
