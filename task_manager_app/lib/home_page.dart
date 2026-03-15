@@ -31,6 +31,13 @@ class HomePage extends StatelessWidget {
                     color: Theme.of(context).colorScheme.onSurfaceVariant,
                   ),
             ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/students_details');
+              },
+              child: const Text('Student Details'),
+            ),
           ],
         ),
       ),
