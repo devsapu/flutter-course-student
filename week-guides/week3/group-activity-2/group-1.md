@@ -1,25 +1,32 @@
-# Group 1 — Measure API response time
+# Group 1 — Activity 2 (advanced / optional)
 
-**Branch:** `week3b-group-1/perf-log`
+**Branch:** `week3-a2-group-1/jsonplaceholder-todos`
+
+**Same API as Activity 1:** `https://jsonplaceholder.typicode.com/todos` (e.g. `?_limit=20`)
 
 ---
 
-## Goal
+## Advanced tasks (same type for every group)
 
-Use **`performance_logger.dart`** from `sample-code/` to measure how long **`http.get`** takes for one JSONPlaceholder URL.
+Work on **your** Activity 1 code. Add as many as you can:
+
+- **Retry** — If `http.get` fails or status ≠ 200, retry up to **2–3 times** with a short pause (`Future.delayed`).
+- **Latency** — Show **last request time in ms** on screen (use `DateTime` or `sample-code/performance_logger.dart`).
+- **UI** — Cards, padding, or clearer typography (pick 1–2 improvements).
+- **Cache** — Keep last good list in memory; on refresh, show old data until new data arrives.
+- **Refresh** — `RefreshIndicator` or obvious refresh button (polish if you already have it).
+- **Filter / search** — `TextField` that filters the **current list** by title (in memory).
 
 ---
 
 ## Steps
 
-1. Copy **`performance_logger.dart`** into your project `lib/`
-2. Branch: `week3b-group-1/perf-log`
-3. Wrap your fetch: `await PerformanceLogger.measure(() => http.get(uri), label: 'jsonplaceholder todos')`
-4. Run on a **device or emulator**, check **console** for **ms**
-5. Commit, push, PR
+1. Continue from Activity 1 branch or create `week3-a2-group-1/jsonplaceholder-todos` from `main`.
+2. Implement 2+ tasks above; prioritize **retry** + **latency** if time is short.
+3. Commit, push, PR
 
 ---
 
-## Done when
+## Help
 
-Console prints a line like: `[PerformanceLogger] jsonplaceholder todos took 120ms` (number will vary).
+- `group-activity-2/instructor-guide.md` — when to skip or simplify this activity.

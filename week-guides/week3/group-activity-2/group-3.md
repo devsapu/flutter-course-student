@@ -1,25 +1,24 @@
-# Group 3 — Identify fastest API
+# Group 3 — Activity 2 (advanced / optional)
 
-**Branch:** `week3b-group-3/fastest`
+**Branch:** `week3-a2-group-3/dummyjson-products`
+
+**Same API as Activity 1:** `https://dummyjson.com/products`  
+Remember: items are in **`products`**.
 
 ---
 
-## Goal
+## Advanced tasks (same for all groups)
 
-Using **`PerformanceLogger.measure`**, call **the same two endpoints** **several times** (e.g. 5 runs each). Record **average** or **best** time. Which **often** feels faster?
+- **Retry** — On failure, retry a few times.
+- **Latency** — Display ms for last request.
+- **UI** — e.g. show **price** clearly, use `Card`.
+- **Cache** — Last `products` list in memory during refresh.
+- **Refresh** — `RefreshIndicator` + `onRefresh`.
+- **Filter / search** — filter by **title** (or price range if you want a challenge).
 
 ---
 
 ## Steps
 
-1. Branch: `week3b-group-3/fastest`
-2. Loop with a small delay if needed; append times to a **`List<int>`**
-3. Print **min / max / average** with simple Dart math
-4. Write **one sentence** in a comment or README: “On my Wi‑Fi, X was usually faster, but…”
-5. Commit, push, PR
-
----
-
-## Done when
-
-Printed stats + honest note that results **vary** by network.
+1. Branch: `week3-a2-group-3/dummyjson-products`
+2. Commit, push, PR

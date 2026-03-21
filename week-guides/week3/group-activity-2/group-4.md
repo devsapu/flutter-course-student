@@ -1,25 +1,24 @@
-# Group 4 — Retry if API fails
+# Group 4 — Activity 2 (advanced / optional)
 
-**Branch:** `week3b-group-4/retry`
+**Branch:** `week3-a2-group-4/dummyjson-users`
+
+**Same API as Activity 1:** `https://dummyjson.com/users`  
+Parse **`users`** array.
 
 ---
 
-## Goal
+## Advanced tasks (same for all groups)
 
-If **`http.get`** throws or returns **status ≠ 200**, **retry** up to **3 times** with a short **`Future.delayed`** between tries.
+- **Retry** mechanism
+- **Latency** in UI (ms)
+- **UI** improvements
+- **Cache** last list in memory
+- **Refresh** (polish)
+- **Filter / search** on **firstName**, **lastName**, or **email**
 
 ---
 
 ## Steps
 
-1. Branch: `week3b-group-4/retry`
-2. Implement a **`Future<T> fetchWithRetry<T>(...)`** helper
-3. Test with a **bad URL** first — should fail after 3 tries; then **good URL** — should succeed on try 1
-4. Show user a **`SnackBar`** or text: “Failed after 3 attempts”
-5. Commit, push, PR
-
----
-
-## Done when
-
-Controlled test shows retry logic running (use prints in loop).
+1. Branch: `week3-a2-group-4/dummyjson-users`
+2. Commit, push, PR

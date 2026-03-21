@@ -1,25 +1,49 @@
-# Group 4 — Error handling
+# Group 4 — Activity 1 (core)
 
-**Branch:** `week3-group-4/error-handling`
+**Branch:** `week3-a1-group-4/dummyjson-users`
 
 ---
 
-## Goal
+## Your API (only yours)
 
-Wrap your HTTP call in **`try` / `catch`**. If the request fails, show a **friendly error message** on screen (not only `print`).
+**Endpoint:** `https://dummyjson.com/users`  
+**Tip:** Top-level JSON has **`users`** (array), not a bare list.
+
+**Expected JSON:**
+
+| Part | Notes |
+|------|--------|
+| `users` | List of user objects |
+| Each user | Often `id`, `firstName`, `lastName`, `email`, `image` |
+
+**Useful fields:**
+
+| Field | Type | Notes |
+|--------|------|--------|
+| `firstName` | String | Combine with `lastName` for one line |
+| `lastName` | String | |
+| `email` | String | Subtitle |
+
+---
+
+## What everyone must implement (same for all groups)
+
+1. **Fetch** and parse **`users`** from the map.
+2. **Display** in `ListView`.
+3. **Loading** / **Error** / **Empty state**
+4. **Provider**
+5. **Refresh**
+6. **(Optional)** Response time
 
 ---
 
 ## Steps
 
-1. Branch: `week3-group-4/error-handling`
-2. Use a **wrong URL** temporarily to test the error UI, then fix the URL
-3. Store `String? errorMessage` in state; set it in **`catch`**
-4. In **`build`**, if `errorMessage != null`, show **`Text`** + **Retry** button that clears error and fetches again
-5. Commit, push, PR
+1. Branch: `week3-a1-group-4/dummyjson-users`
+2. Commit, push, PR
 
 ---
 
-## Done when
+## Help
 
-Broken URL shows your message; working URL shows data.
+- DummyJSON wraps many endpoints — always check the **first key** in the JSON.

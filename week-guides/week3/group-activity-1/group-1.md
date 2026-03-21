@@ -1,27 +1,47 @@
-# Group 1 — API fetch
+# Group 1 — Activity 1 (core)
 
-**Branch:** `week3-group-1/api-fetch`
+**Branch:** `week3-a1-group-1/jsonplaceholder-todos`
 
 ---
 
-## Goal
+## Your API (only yours)
 
-Add the **`http`** package and fetch **JSON** from a public API (see `resources/public-apis.md`). Print the raw response length or first line in the **debug console** to prove it works.
+**Endpoint:** `https://jsonplaceholder.typicode.com/todos`  
+**Tip:** Add `?_limit=20` to keep the response small.
+
+**Expected JSON:** An **array** of objects. Each item usually has:
+
+| Field | Type | Notes |
+|--------|------|--------|
+| `id` | int | |
+| `userId` | int | |
+| `title` | String | Good for list text |
+| `completed` | bool | Optional: show icon or strikethrough |
+
+---
+
+## What everyone must implement (same for all groups)
+
+1. **Fetch** — `http.get`, `async`/`await`, parse JSON (`dart:convert`).
+2. **Display** — Show items in a `ListView` (title at minimum).
+3. **Loading** — Spinner or text while waiting.
+4. **Error** — User-visible message if the request fails (not only `print`).
+5. **Provider** — `ChangeNotifier` holding list + loading + error; `ChangeNotifierProvider` in `main.dart`.
+6. **Refresh** — Button or `RefreshIndicator` to load again.
+7. **Empty state** — If the list is empty after a successful parse, show a short message (e.g. “No items”).
+8. **(Optional)** Print or show **response time** in ms (see `sample-code/performance_logger.dart`).
 
 ---
 
 ## Steps
 
-1. On **`main`**, pull latest: `git pull origin main`
-2. Create branch: `git checkout -b week3-group-1/api-fetch`
-3. Add `http: ^1.2.0` to `pubspec.yaml`, run `flutter pub get`
-4. In a new file or your home screen, call `http.get(Uri.parse('https://jsonplaceholder.typicode.com/todos?_limit=3'))` inside an **`async`** method
-5. Use **`await`** and `debugPrint` part of `response.body`
-6. Trigger the fetch from a **button** tap so you don’t block `main()`
-7. Commit, push, open a **PR** to the branch your instructor names (e.g. **`week-3`** or **`main`**)
+1. `git checkout main && git pull` → create branch `week3-a1-group-1/jsonplaceholder-todos`
+2. Add `http` and `provider` to `pubspec.yaml`, run `flutter pub get`
+3. Build fetch → UI first; then move state into a Provider
+4. Commit, push, open PR as your instructor directs
 
 ---
 
-## Done when
+## Help
 
-You see JSON-related text in the **Run** / **Debug Console** after tapping the button.
+- Week 3: `theory/api-and-async.md`, `theory/provider.md`, `sample-code/`

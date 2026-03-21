@@ -1,25 +1,23 @@
-# Group 9 — Show API latency in UI
+# Group 9 — Activity 2 (advanced / optional)
 
-**Branch:** `week3b-group-9/latency-ui`
+**Branch:** `week3-a2-group-9/jsonplaceholder-albums`
+
+**Same API as Activity 1:** `https://jsonplaceholder.typicode.com/albums` (`?_limit=20`)
 
 ---
 
-## Goal
+## Advanced tasks (same for all groups)
 
-Store the **last request duration** (ms) in state or provider. Show it on screen: **“Last load: 145 ms”**.
+- **Retry**
+- **Latency** in UI
+- **UI** — Improve list / cards
+- **Cache**
+- **Refresh**
+- **Filter / search** — By **title**
 
 ---
 
 ## Steps
 
-1. Branch: `week3b-group-9/latency-ui`
-2. Use **`PerformanceLogger.measure`** or **`DateTime`** before/after **`await`**
-3. **`setState`** / **`notifyListeners`** with **`lastLatencyMs`**
-4. Place **`Text`** under **`AppBar`** or footer
-5. Commit, push, PR
-
----
-
-## Done when
-
-Number updates after each successful fetch.
+1. Branch: `week3-a2-group-9/jsonplaceholder-albums`
+2. Commit, push, PR

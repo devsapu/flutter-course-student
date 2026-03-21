@@ -1,24 +1,24 @@
-# Group 7 — Simple in-memory cache
+# Group 7 — Activity 2 (advanced / optional)
 
-**Branch:** `week3b-group-7/cache`
+**Branch:** `week3-a2-group-7/dummyjson-comments`
+
+**Same API as Activity 1:** `https://dummyjson.com/comments`  
+Use **`comments`** list.
 
 ---
 
-## Goal
+## Advanced tasks (same for all groups)
 
-After the **first** successful fetch, **store** the list in a **`List`** or provider field. If user taps **Refresh**, **first** show cached data **immediately**, **then** fetch in background and **update** if new data arrives.
+- **Retry**
+- **Latency** (ms)
+- **UI** — Readable snippets of long `body` text
+- **Cache**
+- **Refresh**
+- **Filter / search** — In **body** text
 
 ---
 
 ## Steps
 
-1. Branch: `week3b-group-7/cache`
-2. Fields: **`cachedTodos`**, **`lastFetchTime`** (optional)
-3. On refresh: don’t clear UI to empty — keep showing cache until new data returns
-4. Commit, push, PR
-
----
-
-## Done when
-
-Second load feels instant for the user (old list visible while updating).
+1. Branch: `week3-a2-group-7/dummyjson-comments`
+2. Commit, push, PR

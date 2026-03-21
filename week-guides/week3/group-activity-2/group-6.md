@@ -1,24 +1,23 @@
-# Group 6 — Improve loading UX
+# Group 6 — Activity 2 (advanced / optional)
 
-**Branch:** `week3b-group-6/loading-ux`
+**Branch:** `week3-a2-group-6/jsonplaceholder-posts`
+
+**Same API as Activity 1:** `https://jsonplaceholder.typicode.com/posts` (optional `?_limit=15`)
 
 ---
 
-## Goal
+## Advanced tasks (same for all groups)
 
-Go beyond a tiny spinner: add **text** (“Loading todos…”), maybe **`LinearProgressIndicator`**, or **skeleton** placeholders — keep it simple but **clearer**.
+- **Retry**
+- **Latency** display
+- **UI** — Truncate long titles/bodies nicely (`maxLines`, `ellipsis`)
+- **Cache**
+- **Refresh**
+- **Filter / search** — By **title** substring
 
 ---
 
 ## Steps
 
-1. Branch: `week3b-group-6/loading-ux`
-2. While **`loading`**, show **message + indicator**
-3. Optional: **disable** the refresh button while loading
-4. Commit, push, PR
-
----
-
-## Done when
-
-Users always know **something is happening** during fetch.
+1. Branch: `week3-a2-group-6/jsonplaceholder-posts`
+2. Commit, push, PR

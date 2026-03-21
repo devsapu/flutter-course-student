@@ -1,45 +1,58 @@
-# Group activity 2 — Instructor guide (exploration + thinking)
+# Group Activity 2 — Instructor guide (advanced / optional)
 
 ---
 
-## Purpose
+## What this is
 
-Students go **deeper**: measure performance, compare APIs, handle edge cases, and **explain** what they found. This is not only “make it work” — it’s **experiment → observe → report**.
+**Same APIs as Activity 1** (each group keeps **their** endpoint). **Same type of advanced work** for everyone:
 
----
-
-## Timing
-
-- **Total:** ~50–70 minutes.
-- **First 10 min:** Demo `performance_logger.dart` and show **debug console** output.
-- **Middle:** Groups work; encourage **try / break / fix**.
-- **Last 15 min:** Short **presentations** (Group 10 or volunteers) — 1–2 minutes each.
+- Retry when a request fails
+- Show **API response time** in the UI or console (ms)
+- UI improvements (spacing, cards, readable text)
+- **Basic caching** (keep last successful list in memory; show it while refreshing)
+- **Refresh** (clearer UX — e.g. `RefreshIndicator`)
+- **Filtering / search** (narrow the list in memory by title or name)
 
 ---
 
-## How to run it
+## Recommended duration
 
-- Same group numbers as **activity 1** **or** mix teams — your choice.
-- Each file **`group-1.md` … `group-10.md`** is one theme; students may need code from **`week3/sample-code/`**.
-- Emphasize: **no wrong numbers** for “fastest API” — network varies; they should run **several times** and describe **trends**.
-
----
-
-## Mindset
-
-- **Experimentation:** Change URLs, break on purpose, read errors.
-- **Documentation:** Each group notes **what they tried** and **what happened** (for Group 10 / presentations).
+- **45 minutes** (typical)
+- **Extend to 60 minutes** if the class is doing well and you want deeper demos
 
 ---
 
-## Safety
+## When to run this activity
 
-- Use **public** APIs only; respect rate limits; small **`limit`** query params.
+- This block is **OPTIONAL** — use it only if it fits your schedule.
+- **Start only if** the **majority of groups** finished the **core** pieces of Activity 1 (fetch + UI + at least a plan for Provider).
 
 ---
 
-## Expected outcomes
+## Instructor decision
 
-- Students use **`PerformanceLogger.measure`** or manual **`DateTime`** timing.
-- At least one group compares **two** different base URLs.
-- Discussion: why **latency** differs, why **caching** helps, what **retry** is for.
+- If **many groups struggled** in Activity 1 → **skip** Activity 2, or **simplify** (e.g. only retry + one UI tweak).
+- If the class is strong → run full list above.
+
+---
+
+## Tips for you
+
+- Same as Activity 1: **understanding > ticking every box**.
+- Encourage students to reuse **Week 3** notes and `sample-code/performance_logger.dart` for timing.
+
+---
+
+## Teaching facilitation
+
+- Remind students: **completion is not the only success** — explaining **why** retry or cache helps is valuable.
+- Send them back to **`week3/theory/`** and **`sample-code/`** when stuck.
+- Ask:
+  - **“Why are we using async/await here?”**
+  - **“Why did we put this in Provider?”**
+
+---
+
+## If time runs out
+
+- Pick **two** items (e.g. retry + latency text) instead of all six.

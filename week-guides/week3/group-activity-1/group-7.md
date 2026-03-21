@@ -1,25 +1,49 @@
-# Group 7 — Navigation
+# Group 7 — Activity 1 (core)
 
-**Branch:** `week3-group-7/navigation`
+**Branch:** `week3-a1-group-7/dummyjson-comments`
 
 ---
 
-## Goal
+## Your API (only yours)
 
-Add a **second screen** (e.g. **Todo detail**) and navigate with **`Navigator.push`**. Pass **todo id** or **title** via constructor or **arguments**.
+**Endpoint:** `https://dummyjson.com/comments`  
+**Tip:** Wrapper object with **`comments`** array.
+
+**Expected JSON:**
+
+| Part | Notes |
+|------|--------|
+| `comments` | List |
+| Each item | Often `id`, `body`, `postId`, `user` (nested) |
+
+**Useful fields:**
+
+| Field | Type | Notes |
+|--------|------|--------|
+| `body` | String | Main text (may be long — truncate in list) |
+| `id` | int | |
+| `postId` | int | Optional subtitle |
+
+---
+
+## What everyone must implement (same for all groups)
+
+1. **Fetch** → parse **`comments`** list.
+2. **Display** — show **body** (truncated) or id + snippet.
+3. **Loading** / **Error** / **Empty state**
+4. **Provider**
+5. **Refresh**
+6. **(Optional)** Response time
 
 ---
 
 ## Steps
 
-1. Branch: `week3-group-7/navigation`
-2. Create **`TodoDetailScreen`** showing the selected title (and maybe completed flag)
-3. **`ListTile.onTap`** → `Navigator.push(context, MaterialPageRoute(...))`
-4. App bar **Back** should work (automatic with **`AppBar`**)
-5. Commit, push, PR
+1. Branch: `week3-a1-group-7/dummyjson-comments`
+2. Commit, push, PR
 
 ---
 
-## Done when
+## Help
 
-Tap row → detail screen; back → list.
+- If `user` is a nested map, access with care (`comment['user']?['username']` etc.) only if you need it.

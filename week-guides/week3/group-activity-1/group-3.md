@@ -1,26 +1,50 @@
-# Group 3 — Loading indicator
+# Group 3 — Activity 1 (core)
 
-**Branch:** `week3-group-3/loading-indicator`
+**Branch:** `week3-a1-group-3/dummyjson-products`
 
 ---
 
-## Goal
+## Your API (only yours)
 
-While the API request is running, show a **`CircularProgressIndicator`**. Hide it when data arrives or an error happens.
+**Endpoint:** `https://dummyjson.com/products`  
+**Tip:** Response is an **object** with a **`products`** array (not a bare array at the top level).
+
+**Expected JSON (shape):**
+
+| Part | Notes |
+|------|--------|
+| `products` | List of product objects |
+| Each product | Often `id`, `title`, `price`, `thumbnail` (optional) |
+
+**Example fields per product:**
+
+| Field | Type | Notes |
+|--------|------|--------|
+| `id` | int | |
+| `title` | String | List title |
+| `price` | num | Optional in subtitle |
+
+---
+
+## What everyone must implement (same for all groups)
+
+1. **Fetch** — `http.get` → `jsonDecode` → read **`response['products']`** as `List`.
+2. **Display** — `ListView` of product **title** (and optional price).
+3. **Loading** / **Error** / **Empty state**
+4. **Provider** for list + flags
+5. **Refresh**
+6. **(Optional)** Response time
 
 ---
 
 ## Steps
 
-1. Branch: `week3-group-3/loading-indicator`
-2. Add a `bool _loading = false` in state
-3. Before `await http.get`, set `_loading = true` and **`setState`**
-4. In **`finally`**, set `_loading = false` and **`setState`**
-5. In **`build`**, if `_loading`, show centered spinner; else show list or message
-6. Commit, push, PR
+1. Branch: `week3-a1-group-3/dummyjson-products`
+2. Parse the **wrapper** object correctly (`products` key).
+3. Commit, push, PR
 
 ---
 
-## Done when
+## Help
 
-User sees a spinner briefly, then the list (or error UI).
+- If you see `type 'List' is not a subtype...` — you parsed the wrong level; use `['products']`.

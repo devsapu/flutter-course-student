@@ -1,26 +1,49 @@
-# Group 10 — Validation
+# Group 10 — Activity 1 (core)
 
-**Branch:** `week3-group-10/validation`
+**Branch:** `week3-a1-group-10/dummyjson-carts`
 
 ---
 
-## Goal
+## Your API (only yours)
 
-Add a simple **form** (e.g. “Add note” **`TextFormField`**) with **validation** — empty text not allowed; show **error text** under the field.
+**Endpoint:** `https://dummyjson.com/carts`  
+**Tip:** Response includes **`carts`** array (and `total`, `skip`, `limit`).
+
+**Expected JSON:**
+
+| Part | Notes |
+|------|--------|
+| `carts` | List of cart objects |
+| Each cart | Often `id`, `products` (list), `total`, `discountedTotal` |
+
+**Display ideas:**
+
+| Approach | Notes |
+|----------|--------|
+| Show cart **`id`** + **number of products** (`products.length`) | Simplest |
+| Or first product title | Requires nested access |
+
+---
+
+## What everyone must implement (same for all groups)
+
+1. **Fetch** → parse **`carts`** list.
+2. **Display** — one line per cart (e.g. `Cart #id — N items`).
+3. **Loading** / **Error** / **Empty state**
+4. **Provider**
+5. **Refresh**
+6. **(Optional)** Response time
 
 ---
 
 ## Steps
 
-1. Branch: `week3-group-10/validation`
-2. Use **`GlobalKey<FormState>`** and **`TextFormField`**
-3. **`validator:`** return error string if invalid; **`null`** if OK
-4. On **Submit** button, **`if (formKey.currentState!.validate()) { ... }`**
-5. For demo, **`SnackBar`** on success is enough (no real API POST required)
-6. Commit, push, PR
+1. Branch: `week3-a1-group-10/dummyjson-carts`
+2. Nested `products`: use `cart['products'] as List?` and `.length`.
+3. Commit, push, PR
 
 ---
 
-## Done when
+## Help
 
-Empty submit shows error; valid text shows success **`SnackBar`**.
+- This JSON is **nested** — go slowly; print `jsonDecode` shape if stuck.

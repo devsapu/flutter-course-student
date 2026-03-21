@@ -48,8 +48,8 @@ By the end of this week you should be able to:
 | `diagrams/` | Mermaid diagrams — open in GitHub or an editor that renders Mermaid. |
 | `sample-code/` | Example files to copy into your app (see `sample-code/README.md`). |
 | `resources/` | Free public APIs to practice with. |
-| `group-activity-1/` | Guided hands-on (10 groups). |
-| `group-activity-2/` | Exploration + thinking (10 groups). |
+| `group-activity-1/` | Core lab (55 min): **same tasks for all groups**, **different API per group** — see `instructor-guide.md`. |
+| `group-activity-2/` | Optional advanced lab (45–60 min): retry, latency, cache, filter, UI polish — **same API as group number in Activity 1**. |
 
 ---
 

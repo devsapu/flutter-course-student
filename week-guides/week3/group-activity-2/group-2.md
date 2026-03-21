@@ -1,25 +1,29 @@
-# Group 2 — Compare two public APIs
+# Group 2 — Activity 2 (advanced / optional)
 
-**Branch:** `week3b-group-2/two-apis`
+**Branch:** `week3-a2-group-2/jsonplaceholder-users`
+
+**Same API as Activity 1:** `https://jsonplaceholder.typicode.com/users`
 
 ---
 
-## Goal
+## Advanced tasks (same for all groups)
 
-Call **two different** base URLs (e.g. JSONPlaceholder todos **and** ReqRes users) in the same screen or two buttons. Log each response **status** and **body length**.
+- **Retry** — 2–3 attempts on failure.
+- **Latency** — Show last load time (ms) in UI.
+- **UI** — Improve list appearance (cards, spacing).
+- **Cache** — Keep last successful list; show while refreshing.
+- **Refresh** — Pull-to-refresh or clear refresh UX.
+- **Filter / search** — Filter by **name** or **email** (substring match).
 
 ---
 
 ## Steps
 
-1. Branch: `week3b-group-2/two-apis`
-2. Use endpoints from `resources/public-apis.md`
-3. **`debugPrint`** status code + `response.body.length`
-4. Note: different JSON shapes — no need to parse fully for this task
-5. Commit, push, PR
+1. Branch: `week3-a2-group-2/jsonplaceholder-users`
+2. Add features from the list; commit, push, PR
 
 ---
 
-## Done when
+## Help
 
-Two buttons (or one after the other) prove both servers respond successfully.
+- See `week3/theory/` and `sample-code/performance_logger.dart`

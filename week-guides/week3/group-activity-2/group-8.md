@@ -1,24 +1,25 @@
-# Group 8 — Refresh feature
+# Group 8 — Activity 2 (advanced / optional)
 
-**Branch:** `week3b-group-8/refresh`
+**Branch:** `week3-a2-group-8/publicapis-entries`
+
+**Same API as Activity 1:** `https://api.publicapis.org/entries` (use query params if needed)
+
+Parse **`entries`**.
 
 ---
 
-## Goal
+## Advanced tasks (same for all groups)
 
-Add an explicit **Refresh** action: **`FloatingActionButton`**, **`IconButton`** in **`AppBar`**, or **`RefreshIndicator`** (pull to refresh) wrapping the list.
+- **Retry** — Useful for slow APIs.
+- **Latency** — Show load time; compare with Activity 1 runs.
+- **UI** — Category as chip or subtitle.
+- **Cache** — Last `entries` slice you display.
+- **Refresh**
+- **Filter / search** — By **API** name or **Category**
 
 ---
 
 ## Steps
 
-1. Branch: `week3b-group-8/refresh`
-2. **`RefreshIndicator`** needs a scrollable child — use on **`ListView`**
-3. **`onRefresh`** should **`await`** your load method
-4. Commit, push, PR
-
----
-
-## Done when
-
-User can refresh **without** restarting the app.
+1. Branch: `week3-a2-group-8/publicapis-entries`
+2. Commit, push, PR

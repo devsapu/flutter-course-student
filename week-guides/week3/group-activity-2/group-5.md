@@ -1,24 +1,24 @@
-# Group 5 — Handle empty response
+# Group 5 — Activity 2 (advanced / optional)
 
-**Branch:** `week3b-group-5/empty-response`
+**Branch:** `week3-a2-group-5/reqres-users`
+
+**Same API as Activity 1:** `https://reqres.in/api/users`  
+Users live in **`data`**.
 
 ---
 
-## Goal
+## Advanced tasks (same for all groups)
 
-Handle a response that parses to an **empty list** (e.g. use **`_limit=0`** or filter so no items). Show a friendly **“Nothing here”** UI — not a blank white screen.
+- **Retry** — Multiple attempts on error.
+- **Latency** — Show ms after load.
+- **UI** — Avatars optional (`Image.network`); keep layout simple if short on time.
+- **Cache** — Store last `data` list.
+- **Refresh**
+- **Filter / search** — By **name** or **email**
 
 ---
 
 ## Steps
 
-1. Branch: `week3b-group-5/empty-response`
-2. After **`jsonDecode`**, if `list.isEmpty`, set state with **empty** flag
-3. **`build`**: if empty, show **icon + text** (reuse Group 8 ideas)
-4. Commit, push, PR
-
----
-
-## Done when
-
-Empty data shows a clear message; non-empty still shows a list.
+1. Branch: `week3-a2-group-5/reqres-users`
+2. Commit, push, PR

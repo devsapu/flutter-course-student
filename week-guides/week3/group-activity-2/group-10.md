@@ -1,25 +1,30 @@
-# Group 10 — Present findings
+# Group 10 — Activity 2 (advanced / optional)
 
-**Branch:** `week3b-group-10/findings`
+**Branch:** `week3-a2-group-10/dummyjson-carts`
+
+**Same API as Activity 1:** `https://dummyjson.com/carts`  
+Parse **`carts`**; nested **`products`** inside each cart.
 
 ---
 
-## Goal
+## Advanced tasks (same for all groups)
 
-Write a short **FINDINGS.md** (or add to **`README`**) in your project: **what you compared**, **numbers you saw**, **what surprised you**, **one thing you’d improve** next.
+- **Retry**
+- **Latency** (ms)
+- **UI** — Show totals **total** / **discountedTotal** if present in JSON.
+- **Cache** last carts list.
+- **Refresh**
+- **Filter / search** — e.g. filter carts by **id** or **product count** (simple rules OK)
 
 ---
 
 ## Steps
 
-1. Branch: `week3b-group-10/findings`
-2. Include **2+** of: timing, two APIs, retry, cache, latency UI
-3. Keep it **5–10 bullet points** — not an essay
-4. Optional: **1 screenshot** of your app showing latency or list
-5. Commit, push, PR
+1. Branch: `week3-a2-group-10/dummyjson-carts`
+2. Commit, push, PR
 
 ---
 
-## Done when
+## Help
 
-Instructor can read **`FINDINGS.md`** and understand your experiment in **2 minutes**.
+- Nested JSON: test with `debugPrint` in small steps.
