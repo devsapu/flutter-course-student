@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'student_registration_screen.dart';
-import 'home_page.dart';
+import 'package:provider/provider.dart';
+
+import 'providers/todo_provider.dart';
+import 'screens/todo_screen.dart';
 
 void main() {
-  runApp(const TaskManagerApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => TodoProvider()..loadTodos(),
+      child: const TaskManagerApp(),
+    ),
+  );
 }
 
 class TaskManagerApp extends StatelessWidget {
@@ -17,8 +24,7 @@ class TaskManagerApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const HomePage(),
-      // home: const StudentRegistrationScreen(),
+      home: const TodoScreen(),
     );
   }
 }
