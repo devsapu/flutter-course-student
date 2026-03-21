@@ -53,6 +53,36 @@ Future<String> fetchTitle() async {
 
 ---
 
+## What `Uri.parse` does
+
+`http.get` expects a **`Uri`** object, not a plain string.
+
+So this line:
+
+```dart
+final uri = Uri.parse('https://jsonplaceholder.typicode.com/posts/1');
+```
+
+means:
+
+- take a URL string
+- convert it to a structured `Uri`
+- make it ready for `http.get(uri)`
+
+You can also build URLs more safely with `Uri.https` when query values are dynamic:
+
+```dart
+final uri = Uri.https(
+  'jsonplaceholder.typicode.com',
+  '/posts',
+  {'_limit': '10'},
+);
+```
+
+This helps avoid mistakes when building query strings manually.
+
+---
+
 ## Error handling
 
 Networks fail (no Wi‑Fi, server error, timeout). Always use **`try` / `catch`** (and show a message in the UI).
