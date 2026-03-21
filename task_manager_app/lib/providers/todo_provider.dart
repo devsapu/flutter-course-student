@@ -38,40 +38,10 @@ class TodoProvider extends ChangeNotifier {
 
   /// Refresh uses the same loading flow for clarity.
   Future<void> refresh() => loadTodos();
-}
-import 'package:flutter/material.dart';
-import '../models/todo_model.dart';
-import '../services/apiClient.dart';
 
-
-class TodoProvider extends ChangeNotifier {
-  TodoProvider({ApiService? apiService})
-      : _apiService = apiService ?? ApiService();
-
-  final ApiService _apiService;
-
-  List<Todo> todos = [];
-  bool isLoading = false;
-  String? errorMessage;
-
-  void setTodos(List<Todo> newTodos) {
-    todos = newTodos;
+  /// Remove one todo from the current in-memory list.
+  void deleteTodo(int id) {
+    _todos = _todos.where((todo) => todo.id != id).toList();
     notifyListeners();
-  }
-
-  Future<void> loadTodos() async {
-    isLoading = true;
-    errorMessage = null;
-    notifyListeners();
-
-    try {
-      todos = await _apiService.fetchTodos();
-    } catch (e) {
-      errorMessage = e.toString();
-      todos = [];
-    } finally {
-      isLoading = false;
-      notifyListeners();
-    }
   }
 }

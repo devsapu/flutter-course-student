@@ -7,8 +7,8 @@ import 'screens/todo_screen.dart';
 void main() {
   runApp(
     ChangeNotifierProvider(
-      // Load initial data when provider is created.
-      create: (_) => TodoProvider()..loadTodos(),
+      // Provider is created first; screen buttons trigger loading explicitly.
+      create: (_) => TodoProvider(),
       child: const TaskManagerApp(),
     ),
   );
