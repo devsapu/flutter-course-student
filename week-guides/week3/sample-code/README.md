@@ -30,6 +30,15 @@ flutter pub get
 | `example_screen.dart` | List UI + refresh |
 | `performance_logger.dart` | Measures how long a call takes (ms) |
 
+## Full flow (Provider)
+
+1. UI calls `TodoProvider.fetchTodos()`
+2. Provider sets `loading = true` and calls `notifyListeners()`
+3. Service (`api_service.dart`) fetches todos
+4. Provider updates `todos` or `error`
+5. Provider calls `notifyListeners()` again
+6. UI rebuilds and shows loading/data/error
+
 ## Wire up in `main.dart` (sketch)
 
 ```dart
@@ -39,7 +48,7 @@ import 'package:provider/provider.dart';
 void main() {
   runApp(
     ChangeNotifierProvider(
-      create: (_) => TodoProvider()..loadTodos(),
+      create: (_) => TodoProvider()..fetchTodos(),
       child: const MaterialApp(
         home: ExampleScreen(),
       ),

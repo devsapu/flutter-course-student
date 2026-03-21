@@ -46,7 +46,7 @@ class ExampleScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               FilledButton(
-                onPressed: () => provider.loadTodos(),
+                onPressed: () => provider.fetchTodos(),
                 child: const Text('Retry'),
               ),
             ],

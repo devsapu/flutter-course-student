@@ -35,6 +35,7 @@ By the end of this week you should be able to:
 3. **State** (`theory/state-management.md`) — local state and `setState`.
 4. **Prop drilling** (`theory/prop-drilling.md`) — why passing data down many layers hurts.
 5. **Provider** (`theory/provider.md`) — share state without passing props everywhere.
+6. **Deep Provider guide** (new files below) — practical step-by-step use.
 
 **Diagrams** in `diagrams/` give a visual overview. **Sample code** in `sample-code/` ties it together.
 
@@ -77,6 +78,11 @@ flutter run
 - [State management](theory/state-management.md)
 - [Prop drilling](theory/prop-drilling.md)
 - [Provider](theory/provider.md)
+- [Provider introduction](theory/provider-introduction.md)
+- [Create provider](theory/provider-create.md)
+- [Consume provider in UI](theory/provider-consume.md)
+- [Update provider state](theory/provider-update.md)
+- [Provider best practices](theory/provider-best-practices.md)
 - [Public APIs](resources/public-apis.md)
 
 Good luck — build small, test often, read error messages slowly.
