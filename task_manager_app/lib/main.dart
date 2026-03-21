@@ -7,7 +7,7 @@ import 'screens/todo_screen.dart';
 void main() {
   runApp(
     ChangeNotifierProvider(
-      create: (_) => TodoProvider()..loadTodos(),
+      create: (_) => TodoProvider(),
       child: const TaskManagerApp(),
     ),
   );

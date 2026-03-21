@@ -84,5 +84,12 @@ class TodoProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// Remove a todo locally (educational delete action for the list UI).
+  void deleteTodo(int id) {
+    _todos = _todos.where((todo) => todo.id != id).toList();
+    _cachedTodos = _cachedTodos.where((todo) => todo.id != id).toList();
+    notifyListeners();
+  }
+
   Future<void> refresh() => loadTodos(useCache: true);
 }

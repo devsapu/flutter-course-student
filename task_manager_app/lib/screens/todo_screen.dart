@@ -20,6 +20,11 @@ class TodoScreen extends StatelessWidget {
         title: const Text('Week 3 - Advanced Todos'),
         actions: [
           IconButton(
+            onPressed: () => context.read<TodoProvider>().loadTodos(),
+            icon: const Icon(Icons.download),
+            tooltip: 'Load todos',
+          ),
+          IconButton(
             // listen: false avoids rebuild on callback wiring.
             onPressed: () => context.read<TodoProvider>().refresh(),
             icon: const Icon(Icons.refresh),
@@ -97,6 +102,11 @@ class TodoScreen extends StatelessWidget {
               ),
               title: Text(todo.title),
               subtitle: Text('Todo #${todo.id}  •  User #${todo.userId}'),
+              trailing: IconButton(
+                onPressed: () => context.read<TodoProvider>().deleteTodo(todo.id),
+                icon: const Icon(Icons.delete_outline),
+                tooltip: 'Delete',
+              ),
             ),
           );
         },
