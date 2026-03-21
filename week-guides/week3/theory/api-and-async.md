@@ -118,6 +118,33 @@ final map = jsonDecode(response.body) as Map<String, dynamic>;
 final title = map['title'] as String?;
 ```
 
+### What `jsonDecode` does
+
+`jsonDecode` converts JSON **text** into Dart objects.
+
+- JSON object (`{}`) -> `Map<String, dynamic>`
+- JSON array (`[]`) -> `List<dynamic>`
+
+Example with a list endpoint:
+
+```dart
+final list = jsonDecode(response.body) as List<dynamic>;
+```
+
+Then convert each item to your model:
+
+```dart
+final todos = list
+    .map((e) => Todo.fromJson(e as Map<String, dynamic>))
+    .toList();
+```
+
+So the flow is:
+
+1. `response.body` (String)
+2. `jsonDecode(...)` (List/Map)
+3. map into typed models (`Todo`)
+
 Build a **model class** for cleaner code (see `sample-code/todo_model.dart`).
 
 ---
