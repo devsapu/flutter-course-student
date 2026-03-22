@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'product_provider.dart';
 import 'student_registration_screen.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,45 +13,42 @@ class HomePage extends StatelessWidget {
         title: const Text('Task Manager'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.check_circle_outline,
-              size: 64,
-              color: Theme.of(context).colorScheme.primary,
-            ),
-            const SizedBox(height: 16),
-            Text(
-              'Welcome to Group 1',
-              style: Theme.of(context).textTheme.headlineSmall,
-            ),
-            const SizedBox(height: 8),
-            Text(
-              'Week 2 – Your first Flutter app',
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: Theme.of(context).colorScheme.onSurfaceVariant,
-                  ),
-            ),
+      body: Consumer<ProductProvider>(
+        builder: (context, provider, child) {
+          if (provider.loading) {
+            return const Center(child: CircularProgressIndicator());
+          }
+          if (provider.error != null) {
+            return Center(child: Text('Error: ${provider.error}'));
+          }
+          if (provider.todos.isEmpty) {
+            return const Center(child: Text('No data found.'));
+          }
 
-             const SizedBox(height: 30),
-
-            // Student Registration Button
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        const StudentRegistrationScreen(),
-                  ),
-                );
-              },
-              child: const Text('Student Registration form'),
+          return ListView.builder(
+            itemCount: provider.todos.length,
+            itemBuilder: (context, index) {
+              final product = provider.todos[index];
+              return ListTile(
+                title: Text(product.title),
+                subtitle: Text('ID: ${product.id} \n${product.description}'),
+                isThreeLine: true,
+              );
+            },
+          );
+        },
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const StudentRegistrationScreen(),
             ),
-          ],
-        ),
+          );
+        },
+        icon: const Icon(Icons.person_add),
+        label: const Text('Registration'),
       ),
     );
   }

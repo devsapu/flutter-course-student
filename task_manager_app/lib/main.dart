@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
-import 'student_registration_screen.dart';
+import 'package:provider/provider.dart';
+import 'package:task_manager_app/product_provider.dart';
 import 'home_page.dart';
 
 void main() {
-  runApp(const TaskManagerApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => ProductProvider()..fetchProducts(),
+      child: const TaskManagerApp(),
+    ),
+  );
 }
 
 class TaskManagerApp extends StatelessWidget {

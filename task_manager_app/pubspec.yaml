@@ -1,14 +1,16 @@
 name: task_manager_app
 description: Task Manager app - Flutter Industry Course (Week 1+).
-publish_to: 'none'
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  http: ^1.6.0
+  provider: ^6.0.0
   cupertino_icons: ^1.0.6
 
 dev_dependencies:
