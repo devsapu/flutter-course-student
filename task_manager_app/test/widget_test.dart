@@ -10,10 +10,11 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/material.dart';
 import 'package:task_manager_app/main.dart';
 
+
 void main() {
   testWidgets('App shows Task Manager title and welcome message',
       (WidgetTester tester) async {
-    await tester.pumpWidget(const TaskManagerApp());
+    await tester.pumpWidget(const MyApp());
 
     // AppBar title from HomePage.
     expect(find.textContaining('Week 2'), findsOneWidget); 
