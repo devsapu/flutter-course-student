@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager_app/user_list.dart';
 import 'student_registration_screen.dart';
 import 'servises/api_service.dart';
 
@@ -61,10 +62,27 @@ class HomePage extends StatelessWidget {
                     },
                     child: const Text('Student Registration form'),
                   ),
+                
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const UserList(),
+                        ),
+                      );
+                    },
+                    child: const Text('userList'),
+                  ),
+
+
                 ],
               ),
             ),
           ),
+
+          
 
           // API OUTPUT SECTION
           Expanded(
