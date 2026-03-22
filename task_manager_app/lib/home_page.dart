@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/student_list_screen.dart';
+import 'screens/users_list_screen.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -43,6 +44,18 @@ class HomePage extends StatelessWidget {
               },
               icon: const Icon(Icons.person_search),
               label: const Text('View Students'),
+            ),
+            const SizedBox(height: 12),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const UsersListScreen(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.people),
+              label: const Text('View JSONPlaceholder Users'),
             ),
           ],
         ),

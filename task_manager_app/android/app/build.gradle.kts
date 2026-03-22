@@ -8,7 +8,6 @@ plugins {
 android {
     namespace = "com.example.task_manager_app"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
