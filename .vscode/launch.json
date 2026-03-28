@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "task_manager_app (Android emulator)",
+      "request": "launch",
+      "type": "dart",
+      "cwd": "${workspaceFolder}/task_manager_app",
+      "program": "lib/main.dart",
+      "deviceId": "emulator-5554"
+    },
+    {
+      "name": "task_manager_app (pick device)",
+      "request": "launch",
+      "type": "dart",
+      "cwd": "${workspaceFolder}/task_manager_app",
+      "program": "lib/main.dart"
+    }
+  ]
+}

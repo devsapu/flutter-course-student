@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Flutter: run task_manager_app on Android emulator",
+      "type": "shell",
+      "command": "${workspaceFolder}/task_manager_app/run_android_emulator.sh",
+      "options": {
+        "cwd": "${workspaceFolder}/task_manager_app"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
