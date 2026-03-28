@@ -186,16 +186,61 @@ You can skip the CLI and still complete Week 4: register apps in the console (**
 
 ## Step 6 — Gradle (Android)
 
-You must apply the **Google services** plugin for Android. In **Kotlin DSL** projects this usually means:
+Android needs the **Google services Gradle plugin** so the build can read **`android/app/google-services.json`** and wire your app’s **package name** to the correct Firebase project (API keys, project id, etc.). Without it, you often get build errors mentioning **google-services** or Firebase not finding configuration.
 
-1. **Project-level** `settings.gradle.kts` (or root Gradle): declare the Google services plugin version with `apply false`.
-2. **App-level** `android/app/build.gradle.kts`: apply `com.google.gms.google-services`.
+In this course’s **`task_manager_app`**, Gradle uses **Kotlin DSL** (`.gradle.kts` files). You only touch **two** places for Firebase on Android—not the old Groovy `build.gradle` unless your template still uses them.
 
-Exact lines will be shown in the lecture. Your checklist:
+### 6a — `android/settings.gradle.kts` (plugin catalog)
+
+This file already declares the Android and Kotlin plugins. You **add one line** inside the existing `plugins { ... }` block so Gradle **knows the version** of the Google services plugin but does **not** apply it to every module yet (`apply false`):
 
 ```kotlin
-// TODO: In app/build.gradle.kts — apply the google-services plugin id in the plugins { } block.
+plugins {
+    id("dev.flutter.flutter-plugin-loader") version "1.0.0"
+    id("com.android.application") version "8.11.1" apply false
+    id("org.jetbrains.kotlin.android") version "2.2.20" apply false
+    // TODO: Add the Google services plugin (version may differ — check https://developers.google.com/android/guides/google-services-plugin )
+    id("com.google.gms.google-services") version "4.4.2" apply false
+}
 ```
+
+- **Do not** remove Flutter’s `dev.flutter.flutter-plugin-loader` or `includeBuild` for the Flutter SDK.
+- Keep **`repositories { google(); mavenCentral(); ... }`** so Gradle can download the plugin.
+
+### 6b — `android/app/build.gradle.kts` (apply to the `:app` module)
+
+The **`:app`** module is where `google-services.json` lives. In the **`plugins { }` block at the top** of `android/app/build.gradle.kts`, add the Google services plugin **after** the Android and Kotlin plugin ids (order matches the [official FlutterFire / Android setup](https://firebase.google.com/docs/android/setup)):
+
+```kotlin
+plugins {
+    id("com.android.application")
+    id("kotlin-android")
+    id("dev.flutter.flutter-gradle-plugin")
+    // TODO: Apply Google services so google-services.json is processed at build time
+    id("com.google.gms.google-services")
+}
+```
+
+- **`applicationId`** in the same file must match the **Android package name** you registered in Firebase (e.g. `com.example.task_manager_app`).
+- You do **not** need a second copy of `google-services.json` under `android/` root—only **`android/app/`**.
+
+### 6c — What you do *not* need for this template
+
+- **No** extra `classpath "com.google.gms:google-services:..."` in a root `build.gradle` if your project uses the **`plugins { }` + `settings.gradle.kts`** style above (current Flutter default).
+- **No** manual edits to `GeneratedPluginRegistrant` for this step.
+
+### 6d — Verify
+
+After saving both files and placing **`google-services.json`** in **`android/app/`**, run:
+
+```bash
+cd task_manager_app
+flutter clean
+flutter pub get
+flutter run -d android
+```
+
+If Gradle still complains, see **06-common-errors.md** (Android / **google-services** rows) and compare your files line-by-line with the instructor’s **`week4-solution-auth`** branch.
 
 ## Step 7 — Initialize Firebase in Dart
 
