@@ -8,6 +8,10 @@ Use this as a **troubleshooting** sheet during the lab. Ask your instructor if s
 |--------|----------------|-------------|
 | `Target of URI doesn't exist: 'package:firebase_auth/...'` | Dependency not added or `pub get` not run | Run `flutter pub get`; check `pubspec.yaml`. |
 | `FirebaseException` / “No Firebase App” | `Firebase.initializeApp` not called or called too late | Ensure `WidgetsFlutterBinding.ensureInitialized()` then `await Firebase.initializeApp(...)` **before** `runApp`. |
+| `FirebaseProjectRequiredException` / “project id must be specified” (FlutterFire CLI) | `flutterfire configure` run without a project | Pass `--project=YOUR_FIREBASE_PROJECT_ID` (see **03-firebase-setup.md → Step 5**). |
+| `flutterfire: command not found` | Pub global bin not on `PATH` | Run `export PATH="$PATH:$HOME/.pub-cache/bin"` or add it to `~/.zshrc`, then open a new terminal. |
+| “Requires the official Firebase CLI” / `firebase --version` fails (FlutterFire) | Firebase CLI not installed | Install Firebase CLI and run `firebase login` (**03-firebase-setup.md → Step 4b**). |
+| “Found 0 Firebase projects” when running `flutterfire configure` | Not logged in or wrong Google account | Run `firebase login`; use the account that owns the Firebase project. |
 
 ## Android build
 
