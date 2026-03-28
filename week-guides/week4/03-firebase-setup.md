@@ -1,5 +1,11 @@
 # Week 4 — Firebase Setup (Step by Step)
 
+> ⚠️ Before you start  
+> Make sure you have completed the prerequisites:  
+> 👉 See: `00-prerequisites.md`  
+>  
+> This includes installing Firebase CLI, logging in, and setting up FlutterFire CLI.
+
 Follow these steps **before** writing login UI code. Your lecturer may demonstrate on screen; use this as a checklist.
 
 ## Step 1 — Create a Firebase project
@@ -59,6 +65,16 @@ The Firebase console wizard **“Install and run the FlutterFire CLI”** step a
 
 3. **Log in** (browser flow): `firebase login`
 
+### 💡 Important
+
+* You must run `firebase login` successfully
+* If not, you may see:
+
+  * “Found 0 Firebase projects”
+  * “Requires the official Firebase CLI”
+
+👉 These errors usually mean you are not authenticated.
+
 After this works on your machine, continue with **Step 5**. The console command sequence matches what Firebase shows, for example:
 
 ```bash
@@ -111,6 +127,16 @@ flutterfire configure -y \
   --ios-bundle-id=com.example.taskManagerApp
 ```
 
+### ✅ Expected result
+
+After running the command successfully, you should see:
+
+* `lib/firebase_options.dart`
+* `android/app/google-services.json`
+* `ios/Runner/GoogleService-Info.plist`
+
+👉 If these files are missing, the setup did NOT complete correctly.
+
 - Replace **`YOUR_FIREBASE_PROJECT_ID`** with your real project id.
 - **`-y`** skips extra confirmation prompts and accepts sensible defaults.
 - Omit `ios` in `--platforms=...` if you only build Android this week.
@@ -127,14 +153,32 @@ Typical outputs (paths may vary slightly by CLI version):
 | `android/app/google-services.json` | Android native Firebase config |
 | `ios/Runner/GoogleService-Info.plist` | iOS native Firebase config |
 
-### 5e — Repository branches (course layout)
+### 🧭 Which branch should I use?
 
-- On **`week4`**, you add Firebase **yourself** (dependencies, Gradle, `main.dart`) following the lecture and guides.
-- If your instructor provides a **solution branch** with Firebase already wired, run `flutterfire configure` **from that branch** so generated files match the same `applicationId` / bundle id.
+* **week4 (recommended for students)**
 
-### 5f — Security and Git
+  * Step-by-step Firebase integration
+  * Best for learning
 
-**Do not commit** real Firebase keys to a **public** repository if your course policy forbids it. Use a **private** repo, **`.gitignore`** for local config only if the instructor allows, or **environment-specific** projects (dev vs prod) as directed.
+* **week4-solution-auth**
+
+  * Fully working reference implementation
+  * Use this if you get stuck or want to compare
+
+💡 Tip:
+If your app doesn’t work after setup, switch to the solution branch and compare.
+
+### 🔐 Security note
+
+Do not commit Firebase config files to a public repository unless instructed.
+
+These files include:
+
+* `google-services.json`
+* `GoogleService-Info.plist`
+* `firebase_options.dart`
+
+Use a private repository or separate Firebase projects for learning.
 
 ### 5g — Manual alternative (no CLI)
 
@@ -176,3 +220,16 @@ You will pass the correct options (e.g. from `firebase_options.dart`) during liv
 ## Next document
 
 **04-login-implementation.md** — build the login screen and call Firebase.
+
+## 🆘 If you're stuck
+
+Run:
+
+```bash
+git checkout week4-solution-auth
+cd task_manager_app
+flutter pub get
+flutter run
+```
+
+This gives you a working reference app.
