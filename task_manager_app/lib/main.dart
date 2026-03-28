@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'firebase_options.dart';
 import 'home_page.dart';
 import 'login_screen.dart';
+import 'services/notification_service.dart';
 
 /// Ensures bindings are ready, initializes Firebase, then starts the app.
 ///
@@ -15,6 +16,7 @@ Future<void> main() async {
   if (Firebase.apps.isEmpty) {
     await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   }
+  await NotificationService.instance.initialize();
   runApp(const TaskManagerApp());
 }
 
