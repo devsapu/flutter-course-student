@@ -1,26 +1,79 @@
 {
   "project_info": {
-    "project_number": "100000000000",
-    "project_id": "task-manager-course-w4",
-    "storage_bucket": "task-manager-course-w4.appspot.com"
+    "project_number": "922629214095",
+    "project_id": "weighty-flag-651",
+    "storage_bucket": "weighty-flag-651.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:100000000000:android:abc0000000000000000000",
+        "mobilesdk_app_id": "1:922629214095:android:fd861ba0ee27b6e2d0c5fa",
         "android_client_info": {
           "package_name": "com.example.task_manager_app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "922629214095-n70ob2rpo0ro5ntoe1qint335otoskg1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyCourseTemplateReplaceMe000000000000"
+          "current_key": "AIzaSyDoPs52Ggjg3hPC2quqArotBScnLmc_U7o"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922629214095-99ubtr70b8uucp9ut4n3qjgo9icj2fs5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "922629214095-l0goc4bl409ecabdfst9fvi1hqdja1q0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.taskManagerApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922629214095:android:04d0c282d5462a24d0c5fa",
+        "android_client_info": {
+          "package_name": "com.rnboilerplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "922629214095-n70ob2rpo0ro5ntoe1qint335otoskg1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoPs52Ggjg3hPC2quqArotBScnLmc_U7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922629214095-99ubtr70b8uucp9ut4n3qjgo9icj2fs5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "922629214095-l0goc4bl409ecabdfst9fvi1hqdja1q0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.taskManagerApp"
+              }
+            }
+          ]
         }
       }
     }

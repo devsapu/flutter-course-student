@@ -36,11 +36,11 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCourseTemplateReplaceMe000000000000',
-    appId: '1:100000000000:android:abc0000000000000000000',
-    messagingSenderId: '100000000000',
-    projectId: 'task-manager-course-w4',
-    storageBucket: 'task-manager-course-w4.appspot.com',
+    apiKey: 'AIzaSyDoPs52Ggjg3hPC2quqArotBScnLmc_U7o',
+    appId: '1:922629214095:android:fd861ba0ee27b6e2d0c5fa',
+    messagingSenderId: '922629214095',
+    projectId: 'weighty-flag-651',
+    storageBucket: 'weighty-flag-651.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
@@ -52,23 +52,27 @@ class DefaultFirebaseOptions {
     iosBundleId: 'com.example.taskManagerApp',
   );
 
-  /// Web needs `authDomain`. Register a **Web** app in Firebase for production.
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCourseTemplateReplaceMe000000000000',
-    appId: '1:100000000000:web:course000000000000000000',
-    messagingSenderId: '100000000000',
-    projectId: 'task-manager-course-w4',
-    authDomain: 'task-manager-course-w4.firebaseapp.com',
-    storageBucket: 'task-manager-course-w4.appspot.com',
+    apiKey: 'AIzaSyDMxRPFnyxrz88necHds2opwgxzl1qLTxk',
+    appId: '1:922629214095:web:057bc997fa6a82dbd0c5fa',
+    messagingSenderId: '922629214095',
+    projectId: 'weighty-flag-651',
+    authDomain: 'weighty-flag-651.firebaseapp.com',
+    storageBucket: 'weighty-flag-651.firebasestorage.app',
+    measurementId: 'G-1TJL5PG9GN',
+  );
+
+  /// Web needs `authDomain`. Register a **Web** app in Firebase for production.
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyDavjOMR6q_Pq5uzxAF95zSY_pC46VY1FY',
+    appId: '1:922629214095:ios:0743c427259e057fd0c5fa',
+    messagingSenderId: '922629214095',
+    projectId: 'weighty-flag-651',
+    storageBucket: 'weighty-flag-651.firebasestorage.app',
+    iosClientId: '922629214095-l0goc4bl409ecabdfst9fvi1hqdja1q0.apps.googleusercontent.com',
+    iosBundleId: 'com.example.taskManagerApp',
   );
 
   /// Uses the same template project as iOS; add a **macOS** app in Firebase for production.
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCourseTemplateReplaceMeIos000000000',
-    appId: '1:100000000000:ios:def000000000000000000000',
-    messagingSenderId: '100000000000',
-    projectId: 'task-manager-course-w4',
-    storageBucket: 'task-manager-course-w4.appspot.com',
-    iosBundleId: 'com.example.taskManagerApp',
-  );
 }
