@@ -25,8 +25,9 @@ Follow the lecturer on screen. These guides give **checklists** and **partial sn
 ## Prerequisites
 
 - Flutter SDK installed and a working `task_manager_app` project (from earlier weeks).
-- A **Google account** (for the Firebase console).
+- A **Google account** (for the Firebase console and, if you use it, the FlutterFire CLI browser sign-in).
 - Android emulator or a physical device (iOS is optional if your Mac/Xcode setup is ready).
+- For **connecting** your machine to Firebase (CLI, `PATH`, project id, generated files), follow **03-firebase-setup.md → Step 5** in detail.
 
 ## Next document
 
