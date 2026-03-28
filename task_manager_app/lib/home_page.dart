@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
 import 'student_registration_screen.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,6 +12,16 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Task Manager'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        actions: [
+          IconButton(
+            tooltip: 'Sign out',
+            icon: const Icon(Icons.logout),
+            onPressed: () async {
+              // Clears the session; [AuthWrapper] shows [LoginScreen] again.
+              await FirebaseAuth.instance.signOut();
+            },
+          ),
+        ],
       ),
       body: Center(
         child: Column(

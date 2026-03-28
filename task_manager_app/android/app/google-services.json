@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "100000000000",
+    "project_id": "task-manager-course-w4",
+    "storage_bucket": "task-manager-course-w4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100000000000:android:abc0000000000000000000",
+        "android_client_info": {
+          "package_name": "com.example.task_manager_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCourseTemplateReplaceMe000000000000"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
