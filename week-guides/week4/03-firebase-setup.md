@@ -46,6 +46,29 @@ cd task_manager_app
 flutter pub get
 ```
 
+## Step 4b — Install the Firebase CLI (required before FlutterFire)
+
+The Firebase console wizard **“Install and run the FlutterFire CLI”** step assumes the **official Firebase CLI** is installed. FlutterFire runs commands such as `firebase --version` internally; without it you may see **“requires the official Firebase CLI”** or **“Found 0 Firebase projects”**.
+
+1. **Install** the Firebase CLI (pick one):
+   - **macOS (Homebrew):** `brew install firebase-cli`
+   - **npm:** `npm install -g firebase-tools`  
+   See: [Install the Firebase CLI](https://firebase.google.com/docs/cli#install_the_firebase_cli).
+
+2. **Verify:** `firebase --version`
+
+3. **Log in** (browser flow): `firebase login`
+
+After this works on your machine, continue with **Step 5**. The console command sequence matches what Firebase shows, for example:
+
+```bash
+dart pub global activate flutterfire_cli
+cd task_manager_app   # your Flutter app root
+flutterfire configure --project=YOUR_FIREBASE_PROJECT_ID
+```
+
+Optional flags (same as Step 5c): `-y`, `--platforms=android,ios`, `--android-package-name=...`, `--ios-bundle-id=...`.
+
 ## Step 5 — FlutterFire CLI (recommended)
 
 The [FlutterFire CLI](https://firebase.flutter.dev/docs/cli/) can create **`lib/firebase_options.dart`** and download **`google-services.json`** / **`GoogleService-Info.plist`** for you. You must run it on **your own computer** (it opens a browser or uses cached Google login).
