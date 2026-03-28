@@ -7,9 +7,14 @@ import 'home_page.dart';
 import 'login_screen.dart';
 
 /// Ensures bindings are ready, initializes Firebase, then starts the app.
+///
+/// On Android, `google-services.json` can cause a default app to exist before
+/// this runs; calling [Firebase.initializeApp] twice throws [duplicate-app].
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  if (Firebase.apps.isEmpty) {
+    await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  }
   runApp(const TaskManagerApp());
 }
 
