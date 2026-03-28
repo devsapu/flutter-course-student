@@ -11,13 +11,15 @@ import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show TargetPlatform, defaultTargetPlatform, kIsWeb;
 
-/// Default [FirebaseOptions] for Android and iOS (course template).
+/// Default [FirebaseOptions] for supported targets (course template).
+///
+/// **Web / macOS:** Template keys match the placeholder project. For real auth,
+/// run `flutterfire configure` with `web` / `macos` (and register those apps in
+/// Firebase Console) so keys match your project.
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -25,10 +27,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'Add macOS to your Firebase project and extend firebase_options.dart '
-          'if you need desktop auth for this course.',
-        );
+        return macos;
       default:
         throw UnsupportedError(
           'DefaultFirebaseOptions are not supported for this platform.',
@@ -45,6 +44,26 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyCourseTemplateReplaceMeIos000000000',
+    appId: '1:100000000000:ios:def000000000000000000000',
+    messagingSenderId: '100000000000',
+    projectId: 'task-manager-course-w4',
+    storageBucket: 'task-manager-course-w4.appspot.com',
+    iosBundleId: 'com.example.taskManagerApp',
+  );
+
+  /// Web needs `authDomain`. Register a **Web** app in Firebase for production.
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyCourseTemplateReplaceMe000000000000',
+    appId: '1:100000000000:web:course000000000000000000',
+    messagingSenderId: '100000000000',
+    projectId: 'task-manager-course-w4',
+    authDomain: 'task-manager-course-w4.firebaseapp.com',
+    storageBucket: 'task-manager-course-w4.appspot.com',
+  );
+
+  /// Uses the same template project as iOS; add a **macOS** app in Firebase for production.
+  static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyCourseTemplateReplaceMeIos000000000',
     appId: '1:100000000000:ios:def000000000000000000000',
     messagingSenderId: '100000000000',
