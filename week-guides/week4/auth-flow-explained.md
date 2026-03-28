@@ -36,7 +36,28 @@ sequenceDiagram
     end
 ```
 
-After a successful sign-in, the **Firebase SDK** maintains a **session**. Your app listens to **auth state** (e.g. `authStateChanges`) so the UI stays in sync when the user signs out or the session ends.
+## Sign-up (registration) flow
+
+If your app calls **`createUserWithEmailAndPassword`**, Firebase **creates** the account and **signs the user in** in one step. The same **session** and **auth state** ideas apply as after login—your UI can listen to **`authStateChanges()`** and show the home screen when a user exists.
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant A as Flutter app
+    participant F as Firebase Auth
+
+    U->>A: Enter email + password (sign-up form)
+    A->>F: createUserWithEmailAndPassword(...)
+    alt Valid new account
+        F-->>A: User created + signed in
+        A-->>U: Show home (same as after login)
+    else Email in use / weak password / etc.
+        F-->>A: FirebaseAuthException
+        A-->>U: Show error message
+    end
+```
+
+After a successful **sign-in or sign-up**, the **Firebase SDK** maintains a **session**. Your app listens to **auth state** (e.g. `authStateChanges`) so the UI stays in sync when the user signs out or the session ends.
 
 ## What is a token? (simple)
 

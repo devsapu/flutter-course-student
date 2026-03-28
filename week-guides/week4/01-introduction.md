@@ -8,13 +8,13 @@ Welcome to **Week 4: Authentication**. So far your Task Manager app knows how to
 - **Security**: Only signed-in users should see their data (when you connect a backend later).
 - **Trust**: Users expect a clear **login** and **logout** experience.
 
-This week we use **Firebase Authentication** so users can sign in with **email and password**. The same ideas apply to other providers (Google, Apple, etc.) later.
+This week we use **Firebase Authentication** so users can **sign in** with **email and password**. You may also add **sign-up** (account creation) in the app or create users in the console. The same ideas apply to other providers (Google, Apple, etc.) later.
 
 ## What you will learn
 
 1. What “authentication” and “authorization” mean in simple terms.
 2. How to register a Firebase project and enable Email/Password sign-in.
-3. How to call Firebase Auth from Flutter (sign in, sign out).
+3. How to call Firebase Auth from Flutter (sign in, sign out, and optionally **sign up** with `createUserWithEmailAndPassword`).
 4. How to **react** when the user logs in or out using **streams** and `StreamBuilder`.
 5. How to debug common setup mistakes.
 

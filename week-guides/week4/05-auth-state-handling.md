@@ -13,6 +13,8 @@ FirebaseAuth.instance.authStateChanges()
 - Emits `User?` when the user signs in, signs out, or the session refreshes.
 - `null` means **no user**; non-null means **signed in**.
 
+**Sign-up:** When **`createUserWithEmailAndPassword`** succeeds, Firebase treats the user as **signed in** immediately. The **same** `authStateChanges()` stream updates, so your **`StreamBuilder`** pattern does not need a separate “registration success” navigation if you already show **HomePage** when `snapshot.hasData`.
+
 ## StreamBuilder pattern (lecture)
 
 Wrap your **home** decision in a `StreamBuilder`:

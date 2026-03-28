@@ -33,6 +33,8 @@ Use this as a **troubleshooting** sheet during the lab. Ask your instructor if s
 |--------|----------------|-------------|
 | `operation-not-allowed` | Email/Password not enabled | Firebase Console → Authentication → Sign-in method → enable **Email/Password**. |
 | `user-not-found` / `wrong-password` | Bad credentials or user not created | Create user in console or register flow; double-check spelling. |
+| `email-already-in-use` (sign-up) | Email already registered | Use **Sign in** instead, or pick another email. |
+| `weak-password` (sign-up) | Password too short / weak | Firebase often requires **at least 6 characters**; enforce in UI. |
 | `invalid-email` | Malformed email | Trim spaces; validate before calling Firebase. |
 | `network-request-failed` | No internet / emulator DNS | Check connectivity; cold boot emulator. |
 
