@@ -1,4 +1,4 @@
-# Week 4 — Login Implementation (Partial Snippets Only)
+# Week 4 — Login & sign-up implementation (partial snippets only)
 
 This guide aligns with the **live coding** session. Complete every `// TODO:` in your own project.
 
@@ -7,7 +7,9 @@ This guide aligns with the **live coding** session. Complete every `// TODO:` in
 - Email field (keyboard type: email).
 - Password field (**obscured**).
 - **Sign in** button.
-- Show **error messages** from Firebase (e.g. wrong password, user not found).
+- Optional but recommended: **Create account** / **Sign up** (same screen with a toggle, or a separate screen).
+- If you add sign-up: **confirm password** field and basic validation (e.g. minimum length, matching passwords).
+- Show **error messages** from Firebase (e.g. wrong password, user not found, email already in use).
 - Optional: **loading** state while the request runs (disable button or show indicator).
 
 ## Widget structure (suggested)
@@ -47,7 +49,9 @@ class _LoginScreenState extends State<LoginScreen> {
               decoration: const InputDecoration(labelText: 'Email'),
             ),
             // TODO: Add a TextField for password with obscureText: true
-            // TODO: Add a button that calls your sign-in method
+            // TODO (sign-up): Optional second field — confirm password — when in "register" mode
+            // TODO: Add a button that calls your sign-in method (and/or sign-up method)
+            // TODO: TextButton to switch between "Sign in" and "Create account" if you use one screen
           ],
         ),
       ),
@@ -78,12 +82,36 @@ Future<void> _signIn() async {
 }
 ```
 
+## Sign-up method (shape only)
+
+After a successful **`createUserWithEmailAndPassword`**, Firebase **signs the user in automatically**. Your **`authStateChanges()`** stream should emit a `User` and your **`StreamBuilder`** can show **HomePage**—same as after sign-in—without extra navigation.
+
+```dart
+Future<void> _signUp() async {
+  // TODO: Read email and password (and confirm password) from controllers.
+  // TODO: Validate: non-empty, min password length (e.g. 6), passwords match.
+  try {
+    // TODO: await FirebaseAuth.instance.createUserWithEmailAndPassword(
+    //   email: ...,
+    //   password: ...,
+    // );
+    if (!mounted) return;
+    // TODO: Usually nothing else — auth state drives the UI (see 05-auth-state-handling.md).
+  } on FirebaseAuthException catch (e) {
+    if (!mounted) return;
+    // TODO: Map e.code (e.g. email-already-in-use, weak-password) to a friendly SnackBar
+  }
+}
+```
+
+Common **`FirebaseAuthException.code`** values for sign-up: `email-already-in-use`, `weak-password`, `invalid-email`, `operation-not-allowed`.
+
 ## Creating test users
 
 In development you can:
 
 - Use **Firebase console → Authentication → Users → Add user**, or
-- Add a **registration** screen later (not required for Week 4 minimum).
+- Add **sign-up in the app** with `createUserWithEmailAndPassword` (see above)—instructors may demo this on the **`week4-solution-auth`** reference branch.
 
 ## Good practices
 

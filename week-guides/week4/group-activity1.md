@@ -8,7 +8,7 @@
 
 ## Objective
 
-Each group implements **email/password login** using **Firebase Authentication**, wired to the existing Task Manager project, so that **only signed-in users** see the main app shell (e.g. `HomePage`), and unsigned-in users see a **login screen**.
+Each group implements **email/password login** using **Firebase Authentication**, wired to the existing Task Manager project, so that **only signed-in users** see the main app shell (e.g. `HomePage`), and unsigned-in users see a **login screen**. Groups may also add **sign-up** (`createUserWithEmailAndPassword`) so new users can register from the app (see **04-login-implementation.md**).
 
 ---
 
@@ -43,14 +43,15 @@ All members should be able to explain **auth state** in one sentence at the end.
 
 5. **Login UI**  
    - Build a `LoginScreen` with email field, password field (obscured), and sign-in button.  
+   - **Optional extension:** add **Create account** (sign-up) with `createUserWithEmailAndPassword`, confirm password, and friendly errors (`email-already-in-use`, `weak-password`, etc.).  
    - Show **Firebase error messages** in a user-friendly way.
 
 6. **Auth state**  
    - Use `FirebaseAuth.instance.authStateChanges()` with a **`StreamBuilder`** (or pattern demonstrated in class) so the app switches between **LoginScreen** and **HomePage** automatically.
 
 7. **Smoke test**  
-   - Create at least one test user (console or optional registration).  
-   - Confirm: sign in → home appears; **no manual “fake” navigation** that bypasses Firebase.
+   - Create at least one test user (**Firebase console** and/or **in-app sign-up**).  
+   - Confirm: sign in (or sign up) → home appears; **no manual “fake” navigation** that bypasses Firebase.
 
 ---
 
@@ -72,9 +73,11 @@ All members should be able to explain **auth state** in one sentence at the end.
 
 ---
 
-## Bonus challenge
+## Bonus challenges
 
-Add a **logout** control on `HomePage` (e.g. `AppBar` **icon**). Tapping it should call Firebase **sign out** and return the user to the login flow **via auth state**, not a hard-coded route that could leave Firebase still signed in.
+1. **Logout:** Add a **logout** control on `HomePage` (e.g. `AppBar` **icon**). Tapping it should call Firebase **sign out** and return the user to the login flow **via auth state**, not a hard-coded route that could leave Firebase still signed in.
+
+2. **Sign-up:** Add **Create account** on the login flow so new users appear under **Authentication → Users** without using the console.
 
 ---
 
@@ -89,5 +92,5 @@ Add a **logout** control on `HomePage` (e.g. `AppBar` **icon**). Tapping it shou
 
 ## Deliverables (instructor may adjust)
 
-- Short demo (2 minutes): login + home + **bonus** logout if completed.  
+- Short demo (2 minutes): login + home + **bonus** logout and/or **sign-up** if completed.  
 - One paragraph per group: **what broke** and **how you fixed it**.

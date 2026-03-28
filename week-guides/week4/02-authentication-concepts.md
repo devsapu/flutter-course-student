@@ -25,7 +25,7 @@ This week focuses on **authentication** using Firebase.
 | Piece | Role |
 |--------|------|
 | `firebase_core` | Initializes Firebase once when the app starts. |
-| `firebase_auth` | Sign in, sign out, listen to auth changes. |
+| `firebase_auth` | Sign in, sign out, **create users** (`createUserWithEmailAndPassword`), listen to auth changes. |
 | `StreamBuilder` | Rebuilds UI when login state changes (lecture focus). |
 
 ## Partial pattern: imports (lecture)
