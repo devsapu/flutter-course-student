@@ -223,13 +223,15 @@ You will pass the correct options (e.g. from `firebase_options.dart`) during liv
 
 ## 🆘 If you're stuck
 
-Run:
+Run these commands from the **repository root** — the folder that **contains** `task_manager_app/` (not inside `task_manager_app` yet). If `cd task_manager_app` says *no such file or directory*, run `pwd` and `ls` until you are in the correct root.
 
 ```bash
 git checkout week4-solution-auth
 cd task_manager_app
 flutter pub get
-flutter run
+flutter run -d macos
 ```
 
-This gives you a working reference app.
+Use **`flutter run -d macos`** (or **`flutter run -d android`** with an emulator open). If you pick **Chrome** when prompted, Firebase only works after you register a **Web** app in the Firebase Console and run `flutterfire configure` with `web` included (or you use real web keys in `firebase_options.dart`). For the course, **macOS or Android is simplest.**
+
+This checkout gives you a working reference app compared to your own `week4` work.
