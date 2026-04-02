@@ -21,6 +21,8 @@ void main() {
     // Body text from HomePage.
     expect(find.text('Welcome to Task Manager'), findsOneWidget);
 
+    expect(find.byIcon(Icons.check_circle_outline), findsOneWidget);
+
     expect(find.textContaining('Week 2'), findsOneWidget);
 
     expect(find.byIcon(Icons.check_circle_outline), findsOneWidget);
