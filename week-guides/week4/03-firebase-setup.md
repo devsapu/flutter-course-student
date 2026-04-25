@@ -95,13 +95,23 @@ The [FlutterFire CLI](https://firebase.flutter.dev/docs/cli/) can create **`lib/
 dart pub global activate flutterfire_cli
 ```
 
-If the terminal says `flutterfire: command not found`, add Pub’s bin directory to your `PATH` (zsh example — add to `~/.zshrc` if you want it permanent):
+If the terminal says `flutterfire: command not found`, use one of these two options.
+
+**Option A (quickest, no PATH change):**
+
+```bash
+dart pub global run flutterfire_cli:flutterfire --help
+dart pub global run flutterfire_cli:flutterfire configure
+```
+
+**Option B (recommended for repeated use):** add Pub’s bin directory to your `PATH` (zsh example — add to `~/.zshrc`):
 
 ```bash
 export PATH="$PATH:$HOME/.pub-cache/bin"
+source ~/.zshrc
 ```
 
-Open a **new** terminal window after changing `PATH`, then check:
+Then check:
 
 ```bash
 flutterfire --help
