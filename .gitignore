@@ -5,6 +5,15 @@ task_manager_app/build/
 task_manager_app/.flutter-plugins
 task_manager_app/.flutter-plugins-dependencies
 
+# Flutter (tap_rush_game — Week 7)
+tap_rush_game/.dart_tool/
+tap_rush_game/build/
+tap_rush_game/.flutter-plugins
+tap_rush_game/.flutter-plugins-dependencies
+tap_rush_game/android/key.properties
+tap_rush_game/android/**/*.jks
+tap_rush_game/android/**/*.keystore
+
 # IDE
 .idea/
 .vscode/
@@ -16,3 +25,7 @@ Thumbs.db
 
 # Node / npm
 package-lock.json
+
+# Local Firebase CLI outputs (machine-specific)
+task_manager_app/firebase.json
+task_manager_app/macos/Runner/GoogleService-Info.plist

@@ -32,7 +32,10 @@ From the **repository root** (parent of `task_manager_app/`):
 git checkout week-1   # Setup & first app
 git checkout week-2   # UI: login, task list, task card
 git checkout week-3   # API integration
-# ... week-4 through week-8-final
+git checkout week4    # Firebase Authentication
+git checkout week5    # FCM push notifications
+git checkout week7    # Play Store publishing (see tap_rush_game/)
+# ... week-8-final
 ```
 
 Then run the app from `task_manager_app/` as above.
