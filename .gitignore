@@ -23,6 +23,14 @@ tap_rush_game/android/**/*.keystore
 .DS_Store
 Thumbs.db
 
+# React Native (Week 8 — react_native_intro)
+react_native_intro/node_modules/
+react_native_intro/android/app/build/
+react_native_intro/android/build/
+react_native_intro/android/.gradle/
+react_native_intro/ios/build/
+react_native_intro/.metro-health-check*
+
 # Node / npm
 package-lock.json
 
