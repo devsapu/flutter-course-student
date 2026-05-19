@@ -37,3 +37,5 @@ package-lock.json
 # Local Firebase CLI outputs (machine-specific)
 task_manager_app/firebase.json
 task_manager_app/macos/Runner/GoogleService-Info.plist
+config.bat
+node_modules
